@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary text-white">
+    <a class="navbar-brand m-2">CRM Web App</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- <li class="nav-item active">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact: true}">About us</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="users" routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact: true}">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="customers" routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact: true}">Customers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="products" routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact: true}">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="orders" routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact: true}">Orders</a>
+        </li>
+      </ul>
+    </div>
+    <span class="text-end ml-3 mr-3">
+      <ul class="navbar-nav">
+        <!-- <li class="nav-item">
+          <a>Welcome {{loggedInUser.firstName}}</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">Logout</a>
+        </li>
+      </ul>
+    </span>
+  </nav>
+  <router-outlet></router-outlet>

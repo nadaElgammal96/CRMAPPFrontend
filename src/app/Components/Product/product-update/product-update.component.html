@@ -1,0 +1,55 @@
+<div class="container text-center w-50">
+
+    <div class="row">
+        <div class="bg-primary text-center p-3 ml-2 mr-2 mb-4 mt-4 text-white"
+            style="font-weight: bold; font-size: larger; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            Update product
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="name" class="col-2">Name: </label>
+            <input type="text" name="name" class="col-3 form-control"
+                [(ngModel)]="product.name">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="code" class="col-2">Code: </label>
+            <input type="text" name="code" class="col-3 form-control"
+                [(ngModel)]="product.code">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="description" class="col-2">Description: </label>
+            <input type="text" name="description" class="col-3 form-control"
+                [(ngModel)]="product.description">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="unitprice" class="col-2">Unit price: </label>
+            <input type="number" name="unitprice" class="col-3 form-control"
+                [(ngModel)]="product.unitPrice">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="unit" class="col-2">Unit: </label>
+            <input type="text" name="unit" class="col-3 form-control"
+                [(ngModel)]="product.unit">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <button class="btn btn-primary form-control w-25" type="submit" (click)="update()">Update</button>
+        </div>
+    </div>
+</div>

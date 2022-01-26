@@ -1,0 +1,83 @@
+<div class="container text-center w-50">
+
+    <div class="row">
+        <div class="bg-primary text-center p-3 ml-2 mr-2 mb-4 mt-4 text-white"
+            style="font-weight: bold; font-size: larger; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            Update user
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="fname" class="col-2">First name: </label>
+            <input type="text" name="fname" class="col-3 form-control"
+                [(ngModel)]="user.firstName">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="lname" class="col-2">Last name: </label>
+            <input type="text" name="lname" class="col-3 form-control"
+                [(ngModel)]="user.lastName">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="username" class="col-2">Username: </label>
+            <input type="text" name="username" class="col-3 form-control"
+                [(ngModel)]="user.username">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="email" class="col-2">Email address: </label>
+            <input type="email" name="email" class="col-3 form-control"
+                [(ngModel)]="user.emailAddress">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="password" class="col-2">Password: </label>
+            <input type="password" name="password" class="col-3 form-control"
+                [(ngModel)]="user.password">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="phone1" class="col-2">Primary phone number: </label>
+            <input type="tel" name="phone1" class="col-3 form-control"
+                [(ngModel)]="user.primaryPhoneNumber">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="phone2" class="col-2">Other phone number: </label>
+            <input type="tel" name="phone2" class="col-3 form-control"
+                [(ngModel)]="user.otherPhoneNumber">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="active" class="col-2">Active: </label>
+            <input type="radio" name="active" [value]="true" [checked]="user.active" [(ngModel)]="user.active"
+            >
+            <br>
+            <label for="active" class="col-2">Inactive: </label>
+            <input type="radio" name="active" [value]="false" [checked]="!user.active" [(ngModel)]="user.active"
+            >
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <button class="btn btn-primary form-control w-25" type="submit" (click)="update()">Update</button>
+        </div>
+    </div>
+</div>

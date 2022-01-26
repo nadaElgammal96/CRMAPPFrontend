@@ -1,0 +1,77 @@
+<div class="container text-center w-50">
+
+    <form [formGroup]="validations"
+        (ngSubmit)="create(line1.value, line2.value, city.value, state.value, country.value, zip.value)">
+
+        <div class="row">
+            <div class="bg-primary text-center p-3 ml-2 mr-2 mb-4 mt-4 text-white"
+                style="font-weight: bold; font-size: larger; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                Add address
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <label>Address line 1</label>
+                <input type="text" class="col-3 form-control" formControlName="line1" #line1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <label>Address line 2</label>
+                <input type="text" class="col-3 form-control" formControlName="line2" #line2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <label>City</label>
+                <input type="text" class="col-3 form-control" formControlName="city" #city>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <label>State</label>
+                <input type="text" class="col-3 form-control" formControlName="state" #state>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <label>Postal code</label>
+                <input type="text" class="col-3 form-control" formControlName="zip" #zip>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <label>Country</label>
+                <input type="text" class="col-3 form-control" formControlName="country" #country>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <label for="address" class="col-2">Shipping address : </label>
+                <input type="checkbox" name="address" value="shipping" [checked]="address.shippingAddress" 
+                (change)="addressType($event.target)">
+                <br>
+
+                <label for="addressType" class="col-2">Billing address: </label>
+                <input type="checkbox" name="addressType" value="billing" [checked]="address.billingAddress"
+                (change)="addressType($event.target)">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <button class="btn btn-primary form-control w-25" type="submit">Add</button>
+            </div>
+        </div>
+
+    </form>
+</div>

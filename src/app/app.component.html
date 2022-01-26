@@ -1,0 +1,48 @@
+<!-- <div class="container m-1">
+    <nav class="navbar navbar-light bg-light">
+        <a routerLink="home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        <a routerLink="login" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Login</a>
+        <a routerLink="register" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Register</a>
+    </nav>
+
+</div> -->
+<router-outlet></router-outlet>
+<!-- 
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="false" mode="side" [opened]="(sharedService.isHandset$ | async) === false">
+        <mat-toolbar>
+            <div>CRM Web App</div>
+        </mat-toolbar>
+        <mat-nav-list fxlayout="row" fxLayoutAlign="center center" layout-align="center end">
+            <div>
+
+                <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/admin/excelSheets">
+                    <img src="../../../assets/icons/Icon-ExcelSheets.svg" class="icon-margin-left" /> Excel Sheets
+                </a>
+                <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/admin/implementers">
+                    <img src="../../../assets/icons/Icon-Implemeters.svg" class="icon-margin-left" /> Implementers
+                </a>
+
+                <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/admin/calls">
+                    <img src="../../../assets/icons/Icon-Calls.svg" class="icon-margin-left" /> Calls
+                </a>
+                <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" routerLink="/admin/setup">
+                    <mat-icon aria-hidden="false" class="icon-margin-left">settings</mat-icon>Setup
+                </a>
+            </div>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div>
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="sharedService.isHandset$ | async">
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+        </div>
+        <section class="page-content">
+
+            <router-outlet></router-outlet>
+        </section>
+    </mat-sidenav-content>
+
+</mat-sidenav-container> -->

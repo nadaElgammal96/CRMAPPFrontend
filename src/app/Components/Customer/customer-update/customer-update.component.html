@@ -1,0 +1,132 @@
+<div class="container text-center w-50">
+
+    <div class="row">
+        <div class="bg-primary text-center p-3 ml-2 mr-2 mb-4 mt-4 text-white"
+            style="font-weight: bold; font-size: larger; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            Update customer
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="fname" class="col-2">First name: </label>
+            <input type="text" name="fname" class="col-3 form-control" [(ngModel)]="customer.firstName">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="lname" class="col-2">Last name: </label>
+            <input type="text" name="lname" class="col-3 form-control" [(ngModel)]="customer.lastName">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="code" class="col-2">Code: </label>
+            <input type="text" name="code" class="col-3 form-control" [(ngModel)]="customer.code">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="email" class="col-2">Email address: </label>
+            <input type="email" name="email" class="col-3 form-control" [(ngModel)]="customer.emailAddress">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="phone1" class="col-2">Primary phone number: </label>
+            <input type="tel" name="phone1" class="col-3 form-control" [(ngModel)]="customer.primaryPhoneNumber">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="phone2" class="col-2">Other phone number: </label>
+            <input type="tel" name="phone2" class="col-3 form-control" [(ngModel)]="customer.otherPhoneNumber">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <label for="active" class="col-2">Active: </label>
+            <input type="radio" name="active" [value]="true" [checked]="customer.active"
+                [(ngModel)]="customer.active">
+            <br>
+            <label for="active" class="col-2">Inactive: </label>
+            <input type="radio" name="active" [value]="false" [checked]="!customer.active"
+                [(ngModel)]="customer.active">
+        </div>
+    </div>
+
+    <div class="row" *ngIf="customer.customerAddresses?.length > 0">
+        <div class="text-center m-2 form-group">
+            <h2 class="col-2">Adresseses: </h2>
+            <div *ngFor="let a of customer.customerAddresses; let i = index">
+                <br>
+                <h3>
+                    Address {{i+1}}:
+                </h3>
+                
+                <label>Address line 1</label>
+                <input type="text" class="col-3 form-control" [(ngModel)]="a.addressLine1">
+                
+                <br>
+                
+                <label>Address line 2</label>
+                <input type="text" class="col-3 form-control" [(ngModel)]="a.addressLine2">
+                
+                <br>
+                
+                <label>City</label>
+                <input type="text" class="col-3 form-control" [(ngModel)]="a.city">
+                
+                <br>
+                
+                <label>State</label>
+                <input type="text" class="col-3 form-control" [(ngModel)]="a.state">
+                
+                <br>
+                
+                <label>Postal code</label>
+                <input type="text" class="col-3 form-control" [(ngModel)]="a.postalCode">
+                
+                <br>
+                
+                <label>Country</label>
+                <input type="text" class="col-3 form-control" [(ngModel)]="a.country">
+                
+                <br>
+                
+                <h3>Shipping address</h3>
+                <label for="shipping" class="col-2">True: </label>
+                <input type="radio" name="shipping" [value]="true" [checked]="a.shippingAddress"
+                    [(ngModel)]="a.shippingAddress">
+                <br>
+                <label for="shipping" class="col-2">False: </label>
+                <input type="radio" name="shipping" [value]="false" [checked]="!a.shippingAddress"
+                    [(ngModel)]="a.shippingAddress">
+                
+                <br>
+                <br>
+                
+                <h3>Billing address</h3>
+                <label for="billing" class="col-2">True: </label>
+                <input type="radio" name="billing" [value]="true" [checked]="a.billingAddress"
+                    [(ngModel)]="a.billingAddress">
+                <br>
+                <label for="billing" class="col-2">False: </label>
+                <input type="radio" name="billing" [value]="false" [checked]="!a.billingAddress"
+                    [(ngModel)]="a.billingAddress">
+            </div>
+        </div>
+    </div> 
+
+    <div class="row">
+        <div class="text-center m-2 form-group">
+            <button class="btn btn-primary form-control w-25" type="submit" (click)="update()">Update</button>
+        </div>
+    </div>
+</div>

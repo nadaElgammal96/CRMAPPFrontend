@@ -1,0 +1,90 @@
+<div class="container text-center w-50">
+    
+    <form [formGroup]="validations" 
+    (ngSubmit)="create(fname.value, lname.value, uname.value, email.value,
+                         password.value, pPhone.value, oPhone.value)">
+
+        <div class="row">
+            <div class="bg-primary text-center p-3 ml-2 mr-2 mb-4 mt-4 text-white"
+                style="font-weight: bold; font-size: larger; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                Create user
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <label for="fname" class="col-2">First name: </label>
+                <input type="text" name="fname" class="col-3 form-control" 
+                formControlName="fname" #fname>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <label for="lname" class="col-2">Last name: </label>
+                <input type="text" name="lname" class="col-3 form-control" 
+                formControlName="lname" #lname>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <label for="username" class="col-2">Username: </label>
+                <input type="text" name="username" class="col-3 form-control" 
+                formControlName="username" #uname>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <label for="email" class="col-2">Email address: </label>
+                <input type="email" name="email" class="col-3 form-control" 
+                formControlName="email" #email>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <label for="password" class="col-2">Password: </label>
+                <input type="password" name="password" class="col-3 form-control" 
+                formControlName="password" #password>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <label for="phone1" class="col-2">Primary phone number: </label>
+                <input type="tel" name="phone1" class="col-3 form-control" 
+                formControlName="primaryPhone" #pPhone>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <label for="phone2" class="col-2">Other phone number: </label>
+                <input type="tel" name="phone2" class="col-3 form-control" 
+                formControlName="otherPhone" #oPhone>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <label for="active" class="col-2">Active: </label>
+                <input type="radio" name="active" [value]="true" checked (change)="userActivity($event.target)">
+                
+                <br>
+                
+                <label for="active" class="col-2">Inactive: </label>
+                <input type="radio" name="active" [value]="false" (change)="userActivity($event.target)">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-center m-2 form-group">
+                <button class="btn btn-primary form-control w-25" type="submit">Create</button>
+            </div>
+        </div>
+
+    </form>
+
+</div>

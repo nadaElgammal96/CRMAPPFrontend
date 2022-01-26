@@ -1,0 +1,33 @@
+<div class="m-3">
+    <div class="m-3">
+        <a routerLink="../usercreate">
+            <button class="btn btn-primary">Create new user</button>
+        </a>
+    </div>
+    <table class="table table-striped table-hover table-light">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email address</th>
+                <th>Phone</th>
+                <th>Active</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of users; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{u.firstName}} {{u.lastName}}</td>
+                <td>{{u.emailAddress}}</td>
+                <td>{{u.primaryPhoneNumber}}</td>
+                <td>{{u.active}}</td>
+                <td>
+                    <a routerLink="../userupdate/{{u.userID}}">Update</a> | 
+                    <a><i class="material-icons" (click)="deleteUser(u.userID)">delete</i></a> |
+                    <a class="text-blue" style="text-decoration:none;" (click)="changeActivation(u.userID)">De/Activate</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
